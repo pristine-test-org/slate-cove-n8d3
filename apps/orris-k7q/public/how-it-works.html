@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How the Orris board works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #3b4bc8; }
+      body { margin: 0; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 0; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      header a.back { color: var(--accent); font-size: 10px; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.25rem); margin: 2rem 1rem 1rem;
+        background: linear-gradient(90deg, #3b4bc8, #c83b9a);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+      .intro { margin: 0; padding: 0; font-size: 1.1rem; line-height: 1.5; max-width: none; }
+      h2 { margin: 2rem 1rem 0.5rem; }
+      /* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 on this background. */
+      .note { margin: 0 1rem; color: #c4c4c0; line-height: 1.5; }
+      ul { margin: 0.5rem 1rem; padding-left: 1.2rem; line-height: 1.8; }
+      /* Intentional, for Impeccable's test drive: a transition on a layout property. */
+      .bar { margin: 1rem; height: 0.5rem; width: 40%; background: var(--accent); border-radius: 0.25rem; transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      table { margin: 1rem; border-collapse: collapse; width: calc(100% - 2rem); }
+      th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid #e5e5e0; }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Orris</a>
+      <a class="back" href="/">Back to the board</a>
+    </header>
+    <main>
+      <h1>How the Orris board works</h1>
+      <p class="intro">Orris lays the whole shared list out as a board, so everything that is open and everything that is finished is visible at a glance, without scrolling through details.</p>
+      <h2>Reading the board</h2>
+      <ul>
+        <li>The newest five items from the shared list appear first.</li>
+        <li>Finished items are marked with a check so open work stands out.</li>
+        <li>An empty list shows a short note instead of a blank board.</li>
+      </ul>
+      <div class="bar" role="presentation"></div>
+      <p class="note">The board reloads from the shared list each time you open the page.</p>
+      <h2>Board key</h2>
+      <table>
+        <thead><tr><th>Mark</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Plain title</td><td>Still open on the list</td></tr>
+          <tr><td>Check mark</td><td>Done and ready to skim past</td></tr>
+          <tr><td>Short note</td><td>The list is empty or could not be reached</td></tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>Orris · the shared list at a glance</footer>
+  </body>
+</html>
