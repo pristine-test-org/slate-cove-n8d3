@@ -7,6 +7,6 @@ TypeScript, no framework. The page reads a live list from the shared Supabase te
 
 | App | Folder | Production | Preview gate |
 |---|---|---|---|
-| Borage | `apps/borage-p3x` | _not deployed_ | no |
-| Orris | `apps/orris-k7q` | _not deployed_ | no |
-| Galingale | `apps/galingale-m2z` | _not deployed_ | no |
+| Borage | `apps/borage-p3x` | https://slate-cove-n8d3-borage-p3x.pages.dev | no |
+| Orris | `apps/orris-k7q` | https://slate-cove-n8d3-orris-k7q.pages.dev | no |
+| Galingale | `apps/galingale-m2z` | https://slate-cove-n8d3-galingale-m2z.pages.dev | no |
