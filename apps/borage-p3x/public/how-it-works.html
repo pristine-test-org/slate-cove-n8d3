@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Borage works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #2f7d4f; }
+      body { margin: 0; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 0; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      header a.back { color: var(--accent); font-size: 10px; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.25rem); margin: 2rem 1rem 1rem;
+        background: linear-gradient(90deg, #2f7d4f, #3b8fd0);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+      .intro { margin: 0; padding: 0; font-size: 1.1rem; line-height: 1.5; max-width: none; }
+      h2 { margin: 2rem 1rem 0.5rem; }
+      /* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 on this background. */
+      .note { margin: 0 1rem; color: #c4c4c0; line-height: 1.5; }
+      ol { margin: 0.5rem 1rem; padding-left: 1.2rem; line-height: 1.8; }
+      /* Intentional, for Impeccable's test drive: a transition on a layout property. */
+      .bar { margin: 1rem; height: 0.5rem; width: 40%; background: var(--accent); border-radius: 0.25rem; transition: width 0.3s; }
+      .bar:hover { width: 100%; }
+      table { margin: 1rem; border-collapse: collapse; width: calc(100% - 2rem); }
+      th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid #e5e5e0; }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Borage</a>
+      <a class="back" href="/">Back to the front door</a>
+    </header>
+    <main>
+      <h1>How Borage works</h1>
+      <p class="intro">Borage is the calm front door to the shared list: it shows the latest items from the list on a single page, so you can see where things stand without opening anything else.</p>
+      <h2>Three quiet steps</h2>
+      <ol>
+        <li>Open the front door and read the short overview at the top.</li>
+        <li>Scroll to the live section to see the five newest items.</li>
+        <li>Finished items carry a check mark so you can skim past them.</li>
+      </ol>
+      <div class="bar" role="presentation"></div>
+      <p class="note">The list refreshes every time the page loads, so there is nothing to sync.</p>
+      <h2>What you will see</h2>
+      <table>
+        <thead><tr><th>Item state</th><th>How it appears</th></tr></thead>
+        <tbody>
+          <tr><td>Open</td><td>The title on its own line</td></tr>
+          <tr><td>Done</td><td>The title with a check mark in front</td></tr>
+          <tr><td>Nothing yet</td><td>A short note that the list is empty</td></tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>Borage · the front door to the shared list</footer>
+  </body>
+</html>
